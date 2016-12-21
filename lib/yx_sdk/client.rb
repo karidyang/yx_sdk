@@ -1,5 +1,8 @@
 module YxSdk
   class Client
+
+    include Api::User
+
     attr_accessor app_key, app_secret
 
     def initialize(app_key, app_secret, options={})

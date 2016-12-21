@@ -24,7 +24,7 @@ Or install it yourself as:
 
 ```ruby
 $client = YxSdk::Client.new(appkey, appsecrt)
-$client.
+$client.create(id, 'test', nil, 'token')
 ```
 
 ## Development
