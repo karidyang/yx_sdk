@@ -9,7 +9,6 @@ module YxSdk
     def initialize(app_key, app_secret, options={})
       @app_key = app_key
       @app_secret = app_secret
-      super()
     end
 
     # 暴露出：http_get,http_post两个方法，方便第三方开发者扩展未开发的微信API。
