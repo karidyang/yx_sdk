@@ -5,7 +5,11 @@ describe YxSdk do
     expect(YxSdk::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it "test" do
+    expect(YxSdk::Foo.new()).not_to be nil
+  end
+
+  it 'can be init' do
+    expect(YxSdk::Client.new('a', 'b')).not_to be nil  
   end
 end

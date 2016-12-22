@@ -1,12 +1,13 @@
 require 'digest/md5'
 module YxSdk
+  
   class Client
 
     include Api::User
 
-    attr_accessor app_key, app_secret
+    attr_accessor :app_key, :app_secret
 
-    def initialize(app_key, app_secret, options={})
+    def initialize(app_key, app_secret)
       @app_key = app_key
       @app_secret = app_secret
     end

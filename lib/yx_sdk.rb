@@ -1,5 +1,9 @@
-require "yx_sdk/version"
 require "rest-client"
+require "yx_sdk/version"
+require "yx_sdk/handler/result_handler"
+require "yx_sdk/api"
+require "yx_sdk/client"
+
 
 module YxSdk
 
