@@ -1,3 +1,4 @@
+require 'digest/md5'
 module YxSdk
   class Client
 
