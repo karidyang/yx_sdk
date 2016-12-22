@@ -21,7 +21,7 @@ module YxSdk
     def get_header
       timestamp = Time.now.to_i
       noncestr = SecureRandom.hex(16)
-      str = "#{AppSecret}#{noncestr}#{timestamp}"
+      str = "#{app_secret}#{noncestr}#{timestamp}"
       signature = Digest::SHA1.hexdigest(str)
       {
           "AppKey" => @app_key,
