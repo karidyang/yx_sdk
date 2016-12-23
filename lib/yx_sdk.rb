@@ -16,6 +16,7 @@ module YxSdk
       if endpoint == "plain" || endpoint == CUSTOM_ENDPOINT
         post_body = JSON.dump(post_body)
       end
+      logger.info("request url is #{post_api_url}, header is #{header}")
       load_json(resource(post_api_url, header).post(post_body, params: url_params))
     end
 
@@ -27,6 +28,7 @@ module YxSdk
     # return hash
     def load_json(string)
       result_hash = JSON.parse(string.force_encoding("UTF-8").gsub(/[\u0011-\u001F]/, ""))
+      logger.info "response #{result_hash}"
       code   = result_hash.delete("code")
       info = result_hash.delete("info")
       ResultHandler.new(code, info)
