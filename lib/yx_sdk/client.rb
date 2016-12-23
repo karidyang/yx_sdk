@@ -13,9 +13,9 @@ module YxSdk
     end
 
     # 暴露出：http_get,http_post两个方法，方便第三方开发者扩展未开发的微信API。
-    def http_post(url, post_body={}, url_params={}, endpoint="plain")
+    def http_post(url, url_params={}, endpoint="plain")
       # url_params = url_params.merge(access_token_param)
-      YxSdk.http_post_without_token(url, post_body, url_params, get_header, endpoint)
+      YxSdk.http_post_without_token(url, url_params, get_header, endpoint)
     end
 
     def get_header
